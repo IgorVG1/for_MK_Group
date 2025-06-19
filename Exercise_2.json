@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "e7d7ac64-896e-43b9-a9db-600206ea65c7",
+		"name": "Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45056689",
+		"_collection_link": "https://grzhenevskijigor.postman.co/workspace/Grzhenevskij-Igor's-Workspace~7e75ece6-41e0-430e-8ee6-9ac0c748c74a/collection/45056689-e7d7ac64-896e-43b9-a9db-600206ea65c7?action=share&source=collection_link&creator=45056689"
+	},
+	"item": [
+		{
+			"name": "pet",
+			"item": [
+				{
+					"name": "1. Создать нового питомца",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.environment.unset(\"pet_id\");\r",
+									"pm.environment.set(\"pet_id\", jsonData.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"Igor\"\r\n    },\r\n    \"name\": \"FJK\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 0,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Запросить питомца по id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://petstore.swagger.io/v2",
+			"type": "string"
+		}
+	]
+}

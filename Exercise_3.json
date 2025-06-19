@@ -1,0 +1,42 @@
+"users": [
+    {
+        "id": 1,
+        "full_name": "Ivanov Ivan Ivanovich",
+        "year_bith_date": "1990",
+        "children": [
+            {
+                "gender": "daughter",
+                "name": "Masha",
+                "year_bith_date": "2010"
+            },
+            {
+                "gender": "son",
+                "name": "Koly",
+                "year_bith_date": "2020"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "full_name": "Smirnova Victoria",
+        "year_bith_date": "1995",
+        "children": [
+            {
+                "gender": "daughter",
+                "name": "Kate",
+                "year_bith_date": "2015"
+            },
+            {
+                "gender": "daughter",
+                "name": "Nasty",
+                "year_bith_date": "2020"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "full_name": "Petrov Petr Petrovich",
+        "year_bith_date": "2000",
+        "children": "no child"
+    }
+]
